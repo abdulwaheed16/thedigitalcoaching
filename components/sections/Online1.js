@@ -77,7 +77,7 @@ export default function Online1() {
                   awes atnse awctetur.
                 </p>
                 <div className="tg-button-wrap">
-                  <Link href="/courses" className="btn tg-svg">
+                  <Link href="/" className="btn tg-svg">
                     <span className="text">See All Categories</span>
                     <span
                       className="svg-icon"

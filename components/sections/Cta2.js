@@ -13,7 +13,7 @@ export default function Cta2() {
                 <h2 className="title">50% Offer For Very First 50</h2>
                 <h5 className="sub-title">Student’s Mentors</h5>
                 <div className="tg-button-wrap justify-content-center">
-                  <Link href="/contact" className="btn tg-svg">
+                  <Link href="/" className="btn tg-svg">
                     <span className="text">Become a Student</span>
                     <span
                       className="svg-icon"
