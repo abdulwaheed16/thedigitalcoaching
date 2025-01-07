@@ -32,22 +32,22 @@ export default function MobileMenu() {
             style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}
           >
             <li>
-              <Link href="/contact">Mathematics</Link>
+              <Link href="/">Mathematics</Link>
             </li>
             <li>
-              <Link href="/contact">Physics</Link>
+              <Link href="/">Physics</Link>
             </li>
             <li>
-              <Link href="/contact">Chemistry</Link>
+              <Link href="/">Chemistry</Link>
             </li>
             <li>
-              <Link href="/contact">Computer Science</Link>
+              <Link href="/">Computer Science</Link>
             </li>
             <li>
-              <Link href="/contact">Accounting</Link>
+              <Link href="/">Accounting</Link>
             </li>
             <li>
-              <Link href="/contact">Others...</Link>
+              <Link href="/">Others...</Link>
             </li>
           </ul>
           <div
@@ -64,22 +64,22 @@ export default function MobileMenu() {
             style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}
           >
             <li>
-              <Link href="/contact">Mathematics</Link>
+              <Link href="/">Mathematics</Link>
             </li>
             <li>
-              <Link href="/contact">Physics</Link>
+              <Link href="/">Physics</Link>
             </li>
             <li>
-              <Link href="/contact">Chemistry</Link>
+              <Link href="/">Chemistry</Link>
             </li>
             <li>
-              <Link href="/contact">Computer Science</Link>
+              <Link href="/">Computer Science</Link>
             </li>
             <li>
-              <Link href="/contact">Accounting</Link>
+              <Link href="/">Accounting</Link>
             </li>
             <li>
-              <Link href="/contact">Others...</Link>
+              <Link href="/">Others...</Link>
             </li>
           </ul>
           <div

@@ -49,22 +49,22 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                           <Link href="#">IGCSE Tutors</Link>
                           <ul className="sub-menu">
                             <li>
-                              <Link href="/contact">Mathematics</Link>
+                              <Link href="/">Mathematics</Link>
                             </li>
                             <li>
-                              <Link href="/contact">Physics</Link>
+                              <Link href="/">Physics</Link>
                             </li>
                             <li>
-                              <Link href="/contact">Chemistry</Link>
+                              <Link href="/">Chemistry</Link>
                             </li>
                             <li>
-                              <Link href="/contact">Computer Science</Link>
+                              <Link href="/">Computer Science</Link>
                             </li>
                             <li>
-                              <Link href="/contact">Accounting</Link>
+                              <Link href="/">Accounting</Link>
                             </li>
                             <li>
-                              <Link href="/contact">Others...</Link>
+                              <Link href="/">Others...</Link>
                             </li>
                           </ul>
                         </li>
@@ -72,22 +72,22 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                           <Link href="#">A Level Tutors</Link>
                           <ul className="sub-menu">
                             <li>
-                              <Link href="/contact">Mathematics</Link>
+                              <Link href="/">Mathematics</Link>
                             </li>
                             <li>
-                              <Link href="/contact">Physics</Link>
+                              <Link href="/">Physics</Link>
                             </li>
                             <li>
-                              <Link href="/contact">Chemistry</Link>
+                              <Link href="/">Chemistry</Link>
                             </li>
                             <li>
-                              <Link href="/contact">Computer Science</Link>
+                              <Link href="/">Computer Science</Link>
                             </li>
                             <li>
-                              <Link href="/contact">Accounting</Link>
+                              <Link href="/">Accounting</Link>
                             </li>
                             <li>
-                              <Link href="/contact">Others...</Link>
+                              <Link href="/">Others...</Link>
                             </li>
                           </ul>
                         </li>
@@ -168,7 +168,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                           </Link>
                         </li>
                         <li className="header-btn">
-                          <Link href="/contact" className="btn">
+                          <Link href="/" className="btn">
                             Book A Free Demo
                           </Link>
                         </li>
