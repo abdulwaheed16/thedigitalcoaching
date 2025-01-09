@@ -91,7 +91,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                             </li>
                           </ul>
                         </li>
-                        <li className="active">
+                        <li className="">
                           <Link href="/pricing">Pricing</Link>
                         </li>
                       </ul>
