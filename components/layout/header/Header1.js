@@ -32,7 +32,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                     <div className="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
                       <ul className="navigation">
                         <li className="active">
-                          <Link href="#">Home</Link>
+                          <Link href="/">Home</Link>
                           {/* <ul className="sub-menu">
                             <li className="active">
                               <Link href="/">Home One</Link>
@@ -90,6 +90,9 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                               <Link href="/">Others...</Link>
                             </li>
                           </ul>
+                        </li>
+                        <li className="active">
+                          <Link href="/pricing">Pricing</Link>
                         </li>
                       </ul>
                     </div>
