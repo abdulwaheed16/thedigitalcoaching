@@ -15,6 +15,7 @@ import "/public/assets/css/fontawesome-all.min.css";
 import "/public/assets/css/magnific-popup.css";
 import "/public/assets/css/main.css";
 import "/public/assets/css/pricing.css";
+import "/public/assets/css/elements.css";
 import "/public/assets/css/odometer.css";
 import "/public/assets/css/select2.min.css";
 import "/public/assets/css/spacing.css";
