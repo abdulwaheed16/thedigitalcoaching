@@ -4,6 +4,7 @@ import bookSlice from "./bookSlice";
 import courseFilterSlice from "./courseFilterSlice";
 import courseSlice from "./courseSlice";
 import feeFilterSlice from "./feeFilterSlice";
+import contactSlice from "./contactSlice";
 
 export const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ export const store = configureStore({
     courseFilter: courseFilterSlice,
     bookFilter: bookFilterSlice,
     feeFilter: feeFilterSlice,
+    contact: contactSlice,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(),
 });

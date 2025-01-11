@@ -1,6 +1,5 @@
 /* Group-Individual Toggler */
 
-/* From Uiverse.io by Yaya12085 */
 .radio-inputs {
   position: relative;
   display: flex;
@@ -38,4 +37,123 @@
 .radio-inputs .radio input:checked + .name {
   background-color: #fff;
   font-weight: 600;
+}
+
+/* Buttons  */
+
+/* Next - Btn */
+.next-btn {
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 3px;
+  height: 3em;
+  padding: 0 3em;
+  border: none;
+  background-color: var(--tg-common-color-blue);
+  color: #fff;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.next-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  height: 0px;
+  width: 100%;
+  background: var(--tg-common-color-blue);
+  background: linear-gradient(
+    90deg,
+    var(--tg-theme-primary) var(--tg-theme-primary) 100%
+  );
+  transition: 0.2s;
+}
+
+.next-btn .label {
+  position: relative;
+}
+
+.next-btn .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  width: 3em;
+  position: absolute;
+  top: 3em;
+  right: 0;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.next-btn:hover::before {
+  height: 100%;
+}
+
+.next-btn:hover .icon {
+  top: 0;
+  opacity: 1;
+}
+
+/* Back - Btn */
+.back-btn {
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 3px;
+  height: 3em;
+  padding: 0 3em;
+  border: none;
+  background-color: var(--tg-common-color-blue);
+  color: #fff;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.back-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  height: 0px;
+  width: 100%;
+  background: var(--tg-common-color-blue);
+  background: linear-gradient(
+    90deg,
+    var(--tg-theme-primary) var(--tg-theme-primary) 100%
+  );
+  transition: 0.2s;
+}
+
+.back-btn .label {
+  position: relative;
+}
+
+.back-btn .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  width: 3em;
+  position: absolute;
+  top: 3em;
+  left: 0;
+  rotate: 180deg;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.back-btn:hover::before {
+  height: 100%;
+}
+
+.back-btn:hover .icon {
+  top: 0;
+  opacity: 1;
 }

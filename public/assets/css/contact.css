@@ -1,0 +1,35 @@
+.multi_step_form {
+  text-align: center;
+  position: relative;
+  padding: 25px;
+  min-height: 450px;
+  max-width: 810px;
+  border-radius: 20px;
+  border-bottom: 5px solid var(--tg-common-color-blue);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  background: #ffffff;
+  z-index: 1;
+  background-color: var(--tg-common-color-gray-2);
+}
+.multi_step_form #msform .tittle {
+  text-align: center;
+  padding-bottom: 55px;
+}
+.multi_step_form #msform .tittle h2 {
+  font: 500 24px/35px "Roboto", sans-serif;
+  color: #3f4553;
+  padding-bottom: 5px;
+}
+.multi_step_form #msform .tittle p {
+  font: 400 16px/28px "Roboto", sans-serif;
+  color: #5f6771;
+}
+
+.contact-info-list li {
+  list-style: none;
+  border-bottom: 5px solid var(--tg-common-color-blue);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
