@@ -56,7 +56,7 @@ export default function Banner1() {
                   data-aos-delay={800}
                 >
                   <div className="tg-button-wrap">
-                    <Link href="/" className="btn tg-svg">
+                    <Link href="/contact" className="btn tg-svg">
                       <span className="text">Book A Free Demo Class</span>
                       <span
                         className="svg-icon"

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React from "react";
-import StudentContactForm from "./Form";
+import MultiStepForm from "@/components/Contact/StudentForm";
+import StudentContactForm from "@/mock/stepformIndex";
+import { siteConfig } from "@/config/site";
 
 const ContactPage = () => {
   return (
@@ -21,9 +23,7 @@ const ContactPage = () => {
                       <i className="flaticon-pin-1" />
                     </div>
                     <div className="content">
-                      <p>
-                        68 Street Holakt Street world <br /> 10002 New York
-                      </p>
+                      <p>{siteConfig?.address}</p>
                     </div>
                   </li>
                   <li>
@@ -31,8 +31,8 @@ const ContactPage = () => {
                       <i className="flaticon-phone-call" />
                     </div>
                     <div className="content">
-                      <Link href="tel:0123456789">+123 555 69090</Link>
-                      <Link href="tel:0123456789">+123 555 69090</Link>
+                      <Link href="tel:0123456789">{siteConfig?.phone}</Link>
+                      {/* <Link href="tel:0123456789">+123 555 69090</Link> */}
                     </div>
                   </li>
                   <li>
@@ -40,15 +40,18 @@ const ContactPage = () => {
                       <i className="flaticon-email" />
                     </div>
                     <div className="content">
-                      <Link href="mailto:info@gmail.com">info@gmail.com</Link>
-                      <Link href="mailto:info@gmail.com">info@gmail.com</Link>
+                      <Link href="mailto:info@gmail.com">
+                        {siteConfig?.email}
+                      </Link>
+                      {/* <Link href="mailto:info@gmail.com">info@gmail.com</Link> */}
                     </div>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="col-lg-7">
-              <StudentContactForm />
+              {/* <StudentContactForm /> */}
+              <MultiStepForm />
             </div>
           </div>
         </div>

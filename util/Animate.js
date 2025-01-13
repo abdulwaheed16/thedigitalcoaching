@@ -1,10 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import useVariants from "@/hooks/useVariants";
 
-const StepTwo = (status) => {
-  const { variants } = useVariants(status);
-
+const Animate = (children) => {
   return (
     <motion.div
       variants={variants}
@@ -13,10 +10,8 @@ const StepTwo = (status) => {
       animate="visible"
       exit="exit"
       className="col-lg-7 w-100"
-    >
-      Step Two
-    </motion.div>
+    ></motion.div>
   );
 };
 
-export default StepTwo;
+export default Animate;

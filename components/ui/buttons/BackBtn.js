@@ -11,9 +11,15 @@ const BackBtn = () => {
       dispatch(previousStep());
     }
   };
+
   return (
-    <button type="button" className="back-btn" onClick={handlePrevious}>
-      <span class="label">Next</span>
+    <button
+      type="button"
+      className="back-btn"
+      onClick={handlePrevious}
+      disabled={isFirstStep}
+    >
+      <span class="label"> Back</span>
       <span class="icon">
         <svg
           xmlns="http://www.w3.org/2000/svg"

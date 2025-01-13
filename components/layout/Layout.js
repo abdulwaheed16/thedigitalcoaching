@@ -8,6 +8,7 @@ import Header1 from "./header/Header1";
 import Header2 from "./header/Header2";
 import Header3 from "./header/Header3";
 import WhatsApp from "../elements/WhatsApp";
+import { Toaster } from "react-hot-toast";
 
 export default function Layout({
   headerStyle,
@@ -79,7 +80,7 @@ export default function Layout({
 
       <BackToTop />
       <WhatsApp />
-
+      <Toaster />
       <DataBg />
     </>
   );

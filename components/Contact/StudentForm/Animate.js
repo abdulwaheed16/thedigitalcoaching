@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import useVariants from "@/hooks/useVariants";
+import { useSelector } from "react-redux";
 
-const StepThree = (status) => {
-  const { variants } = useVariants(status);
-
+const Animate = ({ children }) => {
+  const { status } = useSelector((state) => state.contact);
+  const variants = useVariants(status);
   return (
     <motion.div
       variants={variants}
@@ -12,11 +13,11 @@ const StepThree = (status) => {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="col-lg-7 w-100 "
+      className="col-lg-7 w-100"
     >
-      Step Three
+      {children}
     </motion.div>
   );
 };
 
-export default StepThree;
+export default Animate;

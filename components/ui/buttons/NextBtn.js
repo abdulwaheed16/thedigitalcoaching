@@ -12,7 +12,12 @@ const NextBtn = () => {
     }
   };
   return (
-    <button type="button" className="next-btn" onClick={handleNext}>
+    <button
+      type="button"
+      className="next-btn"
+      onClick={handleNext}
+      disabled={isLastStep}
+    >
       <span class="label"> {isLastStep ? "Confirm" : "Next"}</span>
       <span class="icon">
         <svg

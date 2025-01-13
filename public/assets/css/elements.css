@@ -157,3 +157,8 @@
   top: 0;
   opacity: 1;
 }
+
+/* Input Container */
+.input-container {
+  border-radius: 8px;
+}

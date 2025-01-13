@@ -1,5 +1,5 @@
 import ContactPage from "@/components/Contact";
-import StudentContactForm from "@/components/Contact/Form";
+import StudentContactForm from "@/mock/MultistepForm";
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
 

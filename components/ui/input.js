@@ -1,11 +1,18 @@
 import React from "react";
 
-const Input = () => {
+const InputComp = ({ register, name, label, type = "text" }) => {
   return (
-    <div className="form-grp">
-      <input name="name" type="text" placeholder="Name *" required />
+    <div class="form-floating mb-3 border-2 border-light rounded-3 shadow-sm">
+      <input
+        type={type}
+        class="form-control"
+        id="floatingInput"
+        placeholder=""
+        {...register(`${name}`)}
+      />
+      <label for="floatingInput">{label}</label>
     </div>
   );
 };
 
-export default Input;
+export default InputComp;

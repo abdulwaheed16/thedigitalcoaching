@@ -171,7 +171,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                           </Link>
                         </li>
                         <li className="header-btn">
-                          <Link href="/" className="btn">
+                          <Link href="/contact" className="btn">
                             Book A Free Demo
                           </Link>
                         </li>

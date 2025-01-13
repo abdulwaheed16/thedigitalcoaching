@@ -3,10 +3,21 @@ const { createSlice } = require("@reduxjs/toolkit");
 const initialValues = {
   currentStep: 1,
   isSuccess: false,
+  isStepSuccess: false,
   status: "asscending",
-  lastStep: 3,
+  lastStep: 4,
   isFirstStep: true,
   isLastStep: false,
+  program: "",
+  formData: {
+    fullname: "",
+    email: "",
+    phone: "",
+    program: "",
+    examDate: "",
+    subjects: [],
+    message: "",
+  },
 };
 const contactSlice = createSlice({
   name: "contactReducer",
@@ -34,9 +45,27 @@ const contactSlice = createSlice({
       state.isSuccess = false;
       state.status = "asscending";
     },
+
+    updateFormData: (state, actions) => {
+      state.formData = { ...state.formData, ...actions.payload };
+
+      // log the form data
+      console.log("New Form Data: ", state.formData);
+      console.log("New program: ", state.formData?.program);
+      if (state.formData?.program) {
+        const jsonValue = JSON.stringify(state.formData?.program);
+        localStorage.setItem("program", jsonValue);
+      }
+    },
   },
 });
 
-export const { nextStep, previousStep, gotoStep } = contactSlice.actions;
+export const {
+  nextStep,
+  previousStep,
+  gotoStep,
+  setStepSuccess,
+  updateFormData,
+} = contactSlice.actions;
 
 export default contactSlice.reducer;
