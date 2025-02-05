@@ -10,7 +10,8 @@ const initialValues = {
   isLastStep: false,
   program: "",
   formData: {
-    fullname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     program: "",

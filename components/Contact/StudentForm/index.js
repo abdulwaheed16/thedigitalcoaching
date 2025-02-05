@@ -16,6 +16,9 @@ import ExamDate from "./ExamDate";
 import toast from "react-hot-toast";
 import ThankYou from "./ThankYou";
 import Confimation from "./Confimation";
+import { useCreateStudentLead } from "@/api-services";
+import { api } from "@/config/axios.config";
+import axios from "axios";
 
 const step2Schema = z.object({
   program: z.string().min(1, "Program is required"),
@@ -108,7 +111,9 @@ const steps = [
 const StudentForm = () => {
   const router = useRouter();
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
+  const { formData } = useSelector((state) => state.contact);
 
   const {
     status,
@@ -135,9 +140,9 @@ const StudentForm = () => {
     if (nextStep < steps.length) {
       setCurrentStep(nextStep);
 
-      // send data to the server
+      // update the each step data to the store
       handleSubmit(async (data) => {
-        console.log("Form submitted:", data);
+        console.log("Form Data Stored:", data);
         dispatch(
           updateFormData({
             ...data,
@@ -149,16 +154,32 @@ const StudentForm = () => {
 
     if (currentStep === steps.length - 1) {
       // send data to the server
+
       handleSubmit(async (data) => {
-        console.log("Form submitted:", data);
-        dispatch(
-          updateFormData({
-            ...data,
-          })
-        );
-        toast.success("Form submitted successfully!");
-        setIsSuccess(true);
-        // router.push("/thank-you");
+        setIsLoading(true);
+        try {
+          const response = await axios.post(
+            "http://localhost:3001/api/leads/studentsleads",
+            {
+              ...formData,
+              data,
+            }
+          );
+          if (response.statusText !== "OK") {
+            console.log("Error creating student lead:", response);
+            toast.error("Oops! Something went wrong");
+            return;
+          }
+          console.log("Form submitted:", data);
+          toast.success("Form submitted successfully!");
+          setIsSuccess(true);
+          reset();
+        } catch (error) {
+          console.error("Error creating student lead:", error);
+          throw error;
+        } finally {
+          setIsLoading(false);
+        }
       })();
     }
   };
@@ -203,19 +224,36 @@ const StudentForm = () => {
               {currentStep > 0 && (
                 <button
                   type="button"
-                  className="btn btn-secondary"
+                  className={`${
+                    isLoading && "visually-hidden"
+                  } btn btn-secondary`}
                   onClick={handlePrev}
                 >
                   Previous
                 </button>
               )}
-              <button
-                type="button"
-                className="btn btn-primary "
-                onClick={handleNext}
-              >
-                {currentStep === steps.length - 1 ? "Submit" : "Next"}
-              </button>
+
+              {isLoading ? (
+                <button class="btn btn-primary" type="button" disabled>
+                  <span
+                    class="spinner-border spinner-border-sm"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  Submitting...
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className="btn btn-primary d-flex gap-2 "
+                  onClick={handleNext}
+                  disabled={false}
+                >
+                  <span>
+                    {currentStep === steps.length - 1 ? "Submit" : "Next"}
+                  </span>
+                </button>
+              )}
             </div>
           </>
         )}

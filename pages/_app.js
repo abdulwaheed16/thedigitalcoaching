@@ -21,6 +21,7 @@ import "/public/assets/css/odometer.css";
 import "/public/assets/css/select2.min.css";
 import "/public/assets/css/spacing.css";
 import "/public/assets/css/tg-cursor.css";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
@@ -35,12 +36,16 @@ function MyApp({ Component, pageProps }) {
       disable: "mobile",
     });
   }, []);
+
+  const qeuryClient = new QueryClient();
   return (
     <>
       {/* <Cursor /> */}
       {!loading ? (
         <Provider store={store}>
-          <Component {...pageProps} />
+          <QueryClientProvider client={qeuryClient}>
+            <Component {...pageProps} />
+          </QueryClientProvider>
         </Provider>
       ) : (
         <Preloader />

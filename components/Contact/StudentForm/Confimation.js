@@ -22,7 +22,7 @@ const Confirmation = ({ register, handleSubmit, errors }) => {
               <li className="list-group-item  py-2">
                 <span className="d-flex justify-content-between align-items-center">
                   <span className="fw-bold">Full Name</span>
-                  <span>{formData?.fullname}</span>
+                  <span>{`${formData?.firstName} ${formData?.lastName}`}</span>
                 </span>
                 <span className="d-flex justify-content-between align-items-center">
                   <span className="fw-bold">Email</span>
