@@ -159,7 +159,7 @@ const StudentForm = () => {
         setIsLoading(true);
         try {
           const response = await axios.post(
-            "http://localhost:3001/api/leads/studentsleads",
+            "https://thedigitalcoaching-dashboard.vercel.app/api/leads/studentsleads",
             {
               ...formData,
               data,
