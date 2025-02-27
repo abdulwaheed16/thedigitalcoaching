@@ -165,15 +165,15 @@ const StudentForm = () => {
               data,
             }
           );
-          if (response.statusText !== "OK") {
+          if (response?.status === 200) {
+            console.log("Form submitted:", data);
+            toast.success("Form submitted successfully!");
+            setIsSuccess(true);
+            reset();
+          } else {
             console.log("Error creating student lead:", response);
             toast.error("Oops! Something went wrong");
-            return;
           }
-          console.log("Form submitted:", data);
-          toast.success("Form submitted successfully!");
-          setIsSuccess(true);
-          reset();
         } catch (error) {
           console.error("Error creating student lead:", error);
           throw error;
